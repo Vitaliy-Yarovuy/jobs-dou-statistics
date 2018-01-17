@@ -20,6 +20,14 @@
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
+
+
+
+        fetch('https://sheets.googleapis.com/v4/spreadsheets/1QyCF0i6O3LKIIpWFxyNsp91L4MyIrhCh-YejnwyCWM8/values/A1%3AC10?key=AIzaSyBUd2qmE1Glp7g7o60Lg1rrhFdgd_X1v4I')
+        .then(request=>request.json())
+        .then((data)=>{
+          console.log('responce',data);
+        })
       };
     </script>
   </body>
